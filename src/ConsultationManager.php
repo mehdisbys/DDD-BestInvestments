@@ -4,7 +4,6 @@ namespace App;
 
 
 use App\Entities\Consultation;
-use App\Entities\Project;
 use App\Entities\Specialist;
 
 class ConsultationManager
