@@ -5,6 +5,7 @@ namespace App\Entities;
 use App\Domain\ClientID;
 use App\Domain\ProjectManagerID;
 use App\Domain\Reference;
+use App\Domain\SpecialistID;
 use App\Domain\Status;
 
 class Project
@@ -62,14 +63,14 @@ class Project
     }
 
 
-    public function addSpecialist($specialistId)
+    public function addSpecialist(Specialist $specialist)
     {
         if($this->status != Status::ACTIVE) {
             //TODO raise event
             throw new \Exception();
         }
 
-        $this->specialists[] = $specialistId;
+        $this->specialists[] = $specialist;
 
         //TODO raise event
     }
